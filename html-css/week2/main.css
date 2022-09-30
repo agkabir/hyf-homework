@@ -145,7 +145,7 @@ iframe{
 
 @media only screen and (max-width: 61.9375rem) {
     .hero-banner {
-        background: url('../images/mobile-size.PNG') center/cover no-repeat;
+        background: url('./images/mobile-size.PNG') center/cover no-repeat;
         background-attachment: fixed;
         height: 12.1875rem;
         }
@@ -153,7 +153,7 @@ iframe{
 
 @media only screen and (min-width: 62rem) {
     .hero-banner {
-        background: url('../images/tablet-size.PNG') center/cover no-repeat;
+        background: url('./images/tablet-size.PNG') center/cover no-repeat;
         background-attachment: fixed;
         height: 21rem;
     }
@@ -188,7 +188,7 @@ iframe{
 
 @media only screen and (min-width: 87.5rem) {
     .hero-banner {
-        background: url('../images/full-size.PNG') center/cover no-repeat;
+        background: url('./images/full-size.PNG') center/cover no-repeat;
         background-attachment: fixed;
         height: 29.625rem;
     }
