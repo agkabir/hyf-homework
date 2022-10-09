@@ -1,0 +1,270 @@
+:root {
+  --background: rgb(216, 216, 216);
+  /* fonts  */
+  --headingFont: "Roboto", sans-serif;
+  --bodyFont: "Nunito", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
+  font-family: var(--bodyFont);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--headingFont);
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="radio"],
+select {
+  height: 1.75rem;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-container > div {
+  display: flex;
+  height: 3rem;
+  background-color: var(--background);
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+.header-container :nth-child(1) {
+  width: 10%;
+}
+
+.header-container > :nth-child(2) {
+  width: 20%;
+  display: flex;
+}
+.header-container > :nth-child(2) a {
+  padding-right: 30%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.progress-bar-dummy {
+  height: 2rem;
+  width: 100%;
+  border: 1px solid rgb(216, 216, 216);
+}
+
+.progress-bar-first {
+  height: 100%;
+  width: 5%;
+  background-color: var(--background);
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin-top: 1em;
+}
+
+label {
+  font-weight: 550;
+}
+
+.div-inline-block,
+.label-text-left,
+.label-text-right,
+.profile-desc {
+  display: inline-block;
+}
+
+.label-text-left,
+.profile-desc {
+  width: 10rem;
+}
+
+.profile-desc p {
+  font-size: small;
+  font-style: italic;
+}
+
+.label-text-left {
+  text-align: right;
+}
+
+.label-text-right {
+  width: 6rem;
+  text-align: left;
+}
+
+textarea {
+  vertical-align: top;
+}
+
+.flex-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.only-button-div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.button {
+  width: 15%;
+  height: 3rem;
+  background-color: var(--background);
+}
+
+.button input {
+  height: 100%;
+  width: 100%;
+  border: none;
+}
+
+/* third page */
+.progress-bar-third {
+  height: 100%;
+  width: 40%;
+  background-color: var(--background);
+}
+.category {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.category .container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Hide the browser's default radio button */
+.category .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.category .container .dot {
+  position: relative;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: #eee;
+  margin: 0 0.5rem;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .dot {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .dot {
+  background-color: #eee;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.category .container .dot:after {
+  content: "";
+  position: relative;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .dot:after {
+  display: flex;
+}
+
+/* Style the indicator (dot/circle) */
+.category .container .dot:after {
+  top: 0.25rem;
+  left: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: #ccc;
+}
+
+/* fourth page */
+.progress-bar-fourth {
+  height: 100%;
+  width: 60%;
+  background-color: var(--background);
+}
+
+.flex-div-offer {
+  width: 60%;
+}
+
+.flex-div-offer,
+.flex-div-image {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.flex-div-offer-grid,
+.flex-div-image-grid {
+  display: flex;
+  justify-content: flex-start;
+  justify-items: flex-start;
+  align-items: flex-start;
+  flex: 1 0 47%;
+}
+
+input[type="image"] {
+  width: 200px;
+}
+
+.display-div-block label {
+  display: block;
+  padding-left: 8rem;
+}
+
+/* fifth page */
+.progress-bar-fifth {
+  height: 100%;
+  width: 90%;
+  background-color: var(--background);
+}
+
+.small-textbox {
+  width: 5%;
+}
+
+/* media query */
+@media screen and (max-width: 37.5rem) {
+  .label-text-right {
+    text-align: right;
+    width: 10rem;
+    padding-top: 1rem;
+  }
+
+  .flex-div-news-letter {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  .flex-div-image-grid {
+    flex: 1 0 22%;
+  }
+}

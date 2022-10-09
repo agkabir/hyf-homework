@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header-container">
+      <div>Logo</div>
+      <div><a href="./fourth.html">Navigation</a></div>
+    </header>
+    <section>
+      <h1>Sign up to <a href="#">yourcustomtailor.com</a></h1>
+    </section>
+    <section>
+      <h2>Step 2/4 - how can we reach you?</h2>
+      <h4>Progress</h4>
+      <div class="progress-bar-dummy">
+        <div class="progress-bar-third"></div>
+      </div>
+      <p>
+        We will probably need to stay in touch somehow. Let is know how we can
+        reach you?
+      </p>
+      <form action="fourth.html" method="get">
+        <ul>
+          <li>
+            <div class="div-inline-block">
+              <label class="label-text-left" for="email">Email*</label>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                title="Email should be like example@example.com"
+                placeholder="ex:example@example.com"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                required
+              />
+            </div>
+            <div class="div-inline-block">
+              <label class="label-text-right" for="Phone">Phone</label>
+              <input
+                type="text"
+                id="Phone"
+                name="Phone"
+                placeholder="+45-7230-8723"
+                pattern="\+\d{1,2}-\d{4}-\d{4}$"
+              />
+            </div>
+          </li>
+          <li>
+            <div class="div-inline-block">
+              <label class="label-text-left" for="password">Password*</label>
+              <input
+                type="text"
+                id="password"
+                name="password"
+                title="min 6 max 8 characters start and end with letters at least 1 capital or small letter, 1 number, 1 special character from [@$!#%?&]"
+                placeholder="ab!C3Q"
+                pattern="^((?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[@$!#%?&])[a-zA-Z].{4,6}[a-zA-Z])"
+                required
+                onChange="onChange()"
+              />
+            </div>
+          </li>
+          <li>
+            <div class="div-inline-block">
+              <label class="label-text-left" for="retype-password"
+                >Retype password*</label
+              >
+              <input
+                type="text"
+                id="retype-password"
+                name="retype-password"
+                title="Please enter the same Password as above"
+                placeholder="ab!C3Q"
+                pattern="^((?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[@$!#%*?&])[a-zA-Z].{4,6}[a-zA-Z])"
+                required
+                onChange="onChange()"
+              />
+            </div>
+          </li>
+        </ul>
+        <p>I want to sign up for the newsletter</p>
+        <ul>
+          <li>
+            <div class="category">
+              <label class="container">
+                <input type="radio" name="news" checked />
+                <span class="news">Weekly news</span>
+                <span class="dot"></span>
+              </label>
+              <label class="container">
+                <input type="radio" name="news" />
+                <span class="news">Monthly News</span>
+                <span class="dot"></span>
+              </label>
+              <label class="container">
+                <input type="radio" name="news" />
+                <span class="news">Don't send me news</span>
+                <span class="dot"></span>
+              </label>
+            </div>
+          </li>
+
+          <li>
+            <div class="only-button-div">
+              <div class="button">
+                <input type="submit" value="Next Step" />
+              </div>
+            </div>
+          </li>
+        </ul>
+      </form>
+    </section>
+    <script type="text/javascript">
+      function onChange() {
+        const password = document.querySelector("input[name=password]");
+        const confirm = document.querySelector("input[name=retype-password]");
+        if (confirm.value === password.value) {
+          confirm.setCustomValidity("");
+        } else {
+          confirm.setCustomValidity("Passwords do not match");
+        }
+      }
+    </script>
+  </body>
+</html>

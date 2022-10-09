@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header-container">
+      <div>Logo</div>
+      <div><a href="./third.html">Navigation</a></div>
+    </header>
+    <section>
+      <h1>Sign up to <a href="#">yourcustomtailor.com</a></h1>
+      <p>
+        We can’t wait to help you improve your life-style and gain the attention
+        from people around you!
+      </p>
+      <p>
+        Sign up below to save up to 70% on apparel, hand-bags and cosmetics. Our
+        agents are busy picking the best offers that match your preferences and
+        style. Every week we will send you a hand-picked selection - we just
+        need to know a few details about your first...
+      </p>
+    </section>
+    <section>
+      <h2>Step 1/4 - tell us who you are?</h2>
+      <h4>Progress</h4>
+      <div class="progress-bar-dummy">
+        <div class="progress-bar-first"></div>
+      </div>
+      <p>
+        Nice to meet you. Let’s spend a minute to get to know each other? Please
+        enter the following:
+      </p>
+      <form action="third.html" method="get">
+        <ul>
+          <li>
+            <div class="div-inline-block">
+              <label class="label-text-left" for="first-name"
+                >First name*</label
+              >
+              <input
+                type="text"
+                id="first-name"
+                name="first-name"
+                placeholder="At least a vaild character"
+                pattern="([a-z][A-Z])*\w+\s?*"
+                required
+              />
+            </div>
+            <div class="div-inline-block">
+              <label class="label-text-right" for="last-name">Last name*</label>
+              <input
+                type="text"
+                id="last-name"
+                name="last-name"
+                placeholder="At least two vaild character"
+                pattern="[a-zA-Z]{2,}([\s]+?([a-zA-Z]{1,})?)*"
+                required
+              />
+            </div>
+          </li>
+          <li>
+            <div class="div-inline-block">
+              <label class="label-text-left" for="country">Country*</label>
+              <select name="country" id="country" required>
+                <option value="">none</option>
+                <option value="DNK">Denmark</option>
+                <option value="FIN">Finland</option>
+                <option value="GER">Germany</option>
+                <option value="ISL">Iceland</option>
+                <option value="NOR">Norway</option>
+                <option value="SWE">Sweden</option>
+              </select>
+            </div>
+          </li>
+          <li>
+            <div class="div-inline-block">
+              <label class="label-text-left" for="street-address"
+                >Street address*</label
+              >
+              <input
+                type="text"
+                id="street-address"
+                name="street-address"
+                placeholder="Victoria lane 123"
+                pattern="^[a-zA-Z.]{2,}([\s+]?([a-zA-Z]{1,})?)*\d{1,5}"
+                required
+              />
+            </div>
+            <div class="div-inline-block">
+              <label class="label-text-right" for="post-code">Post code*</label>
+              <input
+                type="text"
+                id="post-code"
+                name="post-code"
+                placeholder="example: 1234"
+                pattern="^\d{4}$"
+                required
+              />
+            </div>
+          </li>
+        </ul>
+        <p>
+          Use the same address for billing and shipping? Uncheck below to fill
+          out a separate shipping address.
+        </p>
+        <ul>
+          <li>
+            <div class="div-inline-block">
+              <label class="label-text-left" for="shipping-address"
+                >Shipping address</label
+              >
+              <input
+                type="checkbox"
+                id="shipping-address"
+                name="shipping-address"
+              />
+            </div>
+          </li>
+        </ul>
+
+        <h4>Shipping address</h4>
+
+        <ul>
+          <li>
+            <div class="div-inline-block">
+              <label class="label-text-left" for="shipping-first-name"
+                >First name*</label
+              >
+              <input
+                type="text"
+                id="shipping-first-name"
+                name="shipping-first-name"
+                placeholder="At least a vaild character"
+                pattern="([a-z][A-Z])*\w+\s?*"
+                required
+              />
+            </div>
+            <div class="div-inline-block">
+              <label class="label-text-right" for="shipping-last-name"
+                >Last name*</label
+              >
+              <input
+                type="text"
+                id="shipping-last-name"
+                name="shipping-last-name"
+                placeholder="At least two vaild character"
+                pattern="[a-zA-Z]{2,}([\s]+?([a-zA-Z]{1,})?)*"
+                required
+              />
+            </div>
+          </li>
+          <li>
+            <div class="div-inline-block">
+              <label class="label-text-left" for="shipping-country"
+                >Country*</label
+              >
+              <select name="shipping-country" id="shipping-country" required>
+                <option value="">none</option>
+                <option value="DNK">Denmark</option>
+                <option value="FIN">Finland</option>
+                <option value="GER">Germany</option>
+                <option value="ISL">Iceland</option>
+                <option value="NOR">Norway</option>
+                <option value="SWE">Sweden</option>
+              </select>
+            </div>
+          </li>
+          <li>
+            <div class="div-inline-block">
+              <label class="label-text-left" for="shipping-street-address"
+                >Street address*</label
+              >
+              <input
+                type="text"
+                id="shipping-street-address"
+                name="shipping-street-address"
+                placeholder="Victoria lane 123"
+                pattern="^[a-zA-Z.]{2,}([\s+]?([a-zA-Z]{1,})?)*\d{1,5}"
+                required
+              />
+            </div>
+            <div class="div-inline-block">
+              <label class="label-text-right" for="shipping-post-code"
+                >Post code*</label
+              >
+              <input
+                type="text"
+                id="shipping-post-code"
+                name="shipping-post-code"
+                placeholder="example: 1234"
+                pattern="^\d{4}$"
+                required
+              />
+            </div>
+          </li>
+          <li>
+            <div class="div-inline-block">
+              <div class="profile-desc">
+                <label class="label-text-left" for="profile-description"
+                  >Profile description</label
+                >
+                <p>
+                  Please provide a short description of yourself to be displayed
+                  on our social community pages.
+                </p>
+              </div>
+              <textarea
+                name="profile-description"
+                id="profile-description"
+                cols="30"
+                rows="10"
+              ></textarea>
+            </div>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <div class="only-button-div">
+              <div class="button">
+                <input type="submit" value="Next Step" />
+              </div>
+            </div>
+          </li>
+        </ul>
+      </form>
+    </section>
+  </body>
+</html>
