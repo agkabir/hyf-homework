@@ -1,0 +1,2 @@
+first color yellow
+second color green
