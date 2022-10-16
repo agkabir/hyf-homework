@@ -1,0 +1,10 @@
+'number'
+'number'
+'string'
+3
+3
+'string'
+'string'
+'string'
+'number'
+'boolean'
