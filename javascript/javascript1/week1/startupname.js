@@ -11,7 +11,7 @@ const firstWords = [
   "Technology",
 ];
 const secondWords = ["Solution", "Zone", "Support", "Valley", "Horizon"];
-let startupName =
+const startupName =
   firstWords[Math.floor(Math.random() * firstWords.length)] +
   " " +
   secondWords[Math.floor(Math.random() * secondWords.length)];

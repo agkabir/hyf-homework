@@ -2,15 +2,15 @@
 const dogYearOfBirth = 2017;
 const dogYearFuture = 2027;
 const prompt = require("prompt-sync")({ sigint: true });
-let shouldShowResultInDogYears = prompt(
+const shouldShowResultInDogYears = prompt(
   "Do you want to measure dog age in dog years? yes or no : "
 ).toLowerCase();
 
-let age = dogYearFuture - dogYearOfBirth;
-let dogAge = age * 7;
+const age = dogYearFuture - dogYearOfBirth;
+
 if (shouldShowResultInDogYears == "yes")
   console.log(
-    "Your dog will be " + dogAge + "  dog years old in " + dogYearFuture
+    "Your dog will be " + age * 7 + "  dog years old in " + dogYearFuture
   );
 else if (shouldShowResultInDogYears == "no")
   console.log(
