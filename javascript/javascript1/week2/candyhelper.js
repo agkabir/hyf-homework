@@ -1,25 +1,19 @@
 const boughtCandyPrices = [];
-const candyTpye = "Sweet";
+const candyTypeAndPrice = {
+  Sweet: 0.5,
+  Toffee: 1.1,
+  Chocolate: 0.7,
+  "Chewing-gum": 0.03,
+};
+
 function addCandy(candyTpye, weight) {
-  switch (candyTpye) {
-    case "Chocolate":
-      boughtCandyPrices.push(0.7 * weight);
-      break;
-    case "Toffee":
-      boughtCandyPrices.push(1.1 * weight);
-      break;
-    case "Chewing-gum":
-      boughtCandyPrices.push(0.03 * weight);
-      break;
-    default:
-      boughtCandyPrices.push(0.5 * weight);
-  }
+  boughtCandyPrices.push(candyTypeAndPrice[candyTpye] * weight);
 }
 
 // amount to spend
-const amountToSpend = Math.random() * 100;
+const amountToSpend = (Math.random() * 100).toFixed(2);
 // Buying candies
-addCandy(candyTpye, 20);
+addCandy("Sweet", 20);
 addCandy("Toffee", 10);
 addCandy("Chocolate", 20);
 addCandy("Chewing-gum", 10);
@@ -36,6 +30,8 @@ function canBuyMoreCandy(boughtCandyPrices, amountToSpend) {
     totalPrice += boughtCandyPrices[i];
     i++;
   }
+  // It is assumed that customer can buy min 1 gram
+  // minimum price for 1 gram candy is 0.03 (Chewing-gum)
   if (amountToSpend - totalPrice > 0.03)
     console.log("You can buy more, so please do!");
   else console.log("Enough candy for you!");
