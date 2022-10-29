@@ -1,6 +1,6 @@
 const class07Students = [];
 function addStudentToClass(studentName) {
-  if (!/\s/g.test(studentName)) {
+  if (!/\s/g.test(studentName) && studentName != "") {
     if (!class07Students.includes(studentName)) {
       if (studentName === "Queen") class07Students.push(studentName);
       else {
