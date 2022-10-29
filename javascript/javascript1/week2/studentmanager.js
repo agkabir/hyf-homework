@@ -1,6 +1,6 @@
 const class07Students = [];
 function addStudentToClass(studentName) {
-  if (studentName != "") {
+  if (!/\s/g.test(studentName)) {
     if (!class07Students.includes(studentName)) {
       if (studentName === "Queen") class07Students.push(studentName);
       else {
@@ -16,6 +16,7 @@ function getNumberOfStudents() {
 }
 
 // adding students in the class
+addStudentToClass("  ");
 addStudentToClass("Benzamin");
 addStudentToClass("Sara");
 // Trying to add duplicate student in the class
