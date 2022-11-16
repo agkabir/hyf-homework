@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spirit Animal</title>
+  </head>
+  <body>
+    <form id="spiritForm">
+      <legend>Select how you would like to generate spirit animal name:</legend>
+      <div>
+        <input
+          type="radio"
+          id="byHover"
+          name="spiritOption"
+          value="byHoverOnTextBox"
+          onchange="selectedValue(this)"
+        />
+        <label for="byHover">By hover on textbox</label>
+      </div>
+      <div>
+        <input
+          type="radio"
+          id="byChange"
+          name="spiritOption"
+          value="byTextChange"
+          onchange="selectedValue(this)"
+        />
+        <label for="byClick">By Text change</label>
+      </div>
+      <div>
+        <input
+          type="radio"
+          id="byClick"
+          name="spiritOption"
+          value="byButtonClick"
+          onchange="selectedValue(this)"
+        />
+        <label for="byClick">Clicking on button</label>
+      </div>
+
+      <label for="name">Enter your name:</label>
+      <input type="text" id="name" name="name" />
+      <button type="button" id="spiritButton">Generate Spirit</button>
+      <p id="displaySpirit"></p>
+    </form>
+    <script src="./index.js"></script>
+  </body>
+</html>
