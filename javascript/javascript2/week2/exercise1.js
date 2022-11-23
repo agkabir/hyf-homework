@@ -44583,7 +44583,7 @@ const movies = [
     running_times: 5580,
   },
 ];
-/* 
+
 // 1. movies with short title
 const shortTitleMovies = movies.filter((x) => x.title.length <= 12);
 console.log(shortTitleMovies.length);
@@ -44629,8 +44629,7 @@ const newMovies = movies.map((movie) => {
 const ratingsGreaterThan6 = movies
   .filter((movie) => movie.rating > 6)
   .map((movie) => movie.rating);
-//console.log(ratingsGreaterThan6);
-*/
+console.log(ratingsGreaterThan6);
 
 //6. Count the total number of movies containing any of following keywords: Surfer, Alien or Benjamin.
 const pattern = /\b(Benjamin|surfer|alien)\b/gim;
