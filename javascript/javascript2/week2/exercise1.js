@@ -44603,7 +44603,7 @@ console.log(
 // 4. new array that has an extra key called tag using forEach
 const moviesNew = [];
 movies.forEach((movie) => {
-  newMovie = { ...movie };
+  const newMovie = { ...movie };
   if (movie.rating >= 7) {
     newMovie["tag"] = "Good";
   } else if (movie.rating >= 4 && movie.rating < 7) {
@@ -44663,3 +44663,20 @@ const duplicates = movies.filter(
   (x) => checkDuplicatewords(x.title.toLowerCase()) === "true"
 );
 console.log(duplicates);
+
+//optional part
+// 8. average rating using reduce
+const averageRating = movies.reduce(
+  (accumulator, currentObj) => accumulator + currentObj.rating / movies.length,
+  0
+);
+console.log(averageRating);
+// 9. Count the total number of Good, Average and Bad movies using reduce.
+const countedDict = newMovies.reduce((tagMovies, movie) => {
+  const currCount = tagMovies[movie.tag.toLowerCase() + "Movies"] ?? 0;
+  return {
+    ...tagMovies,
+    [movie.tag.toLowerCase() + "Movies"]: currCount + 1,
+  };
+}, {});
+console.log(countedDict);
