@@ -32,11 +32,18 @@ function displaySearchedProduct(searchedProducts) {
 
 function searchByProductName() {
   const searchText = document.getElementById("searchProduct").value;
-  const pattern = new RegExp(searchText, "gim");
-  const searchedProducts = products.filter((product) =>
-    pattern.test(product.name)
-  );
-  displaySearchedProduct(searchedProducts);
+  if (searchText != "") {
+    console.log("i am here");
+    const pattern = new RegExp(searchText, "gim");
+    const searchedProducts = products.filter((product) =>
+      pattern.test(product.name)
+    );
+    displaySearchedProduct(searchedProducts);
+  } else {
+    while (productUl.children.length != 0) {
+      productUl.removeChild(productUl.childNodes[0]);
+    }
+  }
 }
 
 function searchByProductPrice() {
