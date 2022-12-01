@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="game.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="textBoxButton">
+        <input type="number" id="timeInterval" name="timeInterval" />
+
+        <input
+          type="button"
+          value="Start Game"
+          id="btnStartGame"
+          name="btnStartGame"
+        />
+      </div>
+    </div>
+    <div class="users">
+      <div class="userSL">
+        <h2>Press S</h2>
+        <p id="paraS"></p>
+        <p id="winS"></p>
+      </div>
+      <div class="userSL">
+        <h2>Press L</h2>
+        <p id="paraL"></p>
+        <p id="winL"></p>
+      </div>
+    </div>
+    <script src="game.js"></script>
+  </body>
+</html>
