@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="game.css" />
   </head>
   <body>
+    <div id="countDown"></div>
     <div class="container">
       <div class="textBoxButton">
         <input type="number" id="timeInterval" name="timeInterval" />
@@ -21,17 +22,20 @@
       </div>
     </div>
     <div class="users">
-      <div class="userSL">
+      <div id="userS">
+        <canvas id="canvasS"></canvas>
         <h2>Press S</h2>
         <p id="paraS"></p>
         <p id="winS"></p>
       </div>
-      <div class="userSL">
+      <div id="userL">
+        <canvas id="canvasL"></canvas>
         <h2>Press L</h2>
         <p id="paraL"></p>
         <p id="winL"></p>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/confetti-js/dist/index.min.js"></script>
     <script src="game.js"></script>
   </body>
 </html>
