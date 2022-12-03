@@ -29,6 +29,21 @@ input[type="button"] {
 
 #canvasS,
 #canvasL {
-  width: 50%;
-  padding: 10rem 0 0 0;
+  width: 100%;
+  height: 100%;
+}
+
+.canvas-wrap {
+  position: relative;
+  width: 45%;
+  height: 400px;
+  align-items: center;
+  justify-items: center;
+  justify-content: centers;
+}
+.canvas-wrap canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
