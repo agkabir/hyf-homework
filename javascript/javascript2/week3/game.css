@@ -1,0 +1,49 @@
+input[type="text"] {
+  display: block;
+}
+input[type="button"] {
+  display: block;
+  margin-top: 10px;
+  padding: 5px;
+}
+#countDown {
+  text-align: right;
+  padding: 1rem 3rem 0 0;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textBoxButton {
+  display: block;
+}
+
+.users {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+#canvasS,
+#canvasL {
+  width: 100%;
+  height: 100%;
+}
+
+.canvas-wrap {
+  position: relative;
+  width: 45%;
+  height: 400px;
+  align-items: center;
+  justify-items: center;
+  justify-content: centers;
+}
+.canvas-wrap canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
