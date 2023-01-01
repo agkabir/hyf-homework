@@ -1,0 +1,37 @@
+label {
+  display: block;
+  margin-top: 0.5rem;
+}
+label:first-of-type {
+  margin-top: 0;
+}
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+  width: 10rem;
+  height: 1.5rem;
+}
+input[type="button"],
+.button {
+  display: block;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.logoutDiv input[type="button"],
+.logoutDiv p {
+  display: inline-block;
+}
+.logoutDiv {
+  display: none;
+}
+.screenshotDiv {
+  display: none;
+}
+
+.screenshot-post {
+  margin-top: 2rem;
+  display: flexbox;
+  justify-content: space-between;
+}
