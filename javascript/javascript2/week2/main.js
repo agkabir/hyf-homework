@@ -16,9 +16,9 @@ function displaySearchedProduct(searchedProducts) {
   }
   searchedProducts.forEach((obj) => {
     const titleLi = document.createElement("li");
-    const titleH1 = document.createElement("h1");
-    titleH1.innerHTML = obj.name;
-    titleLi.append(titleH1);
+    const titleH3 = document.createElement("h3");
+    titleH3.innerText = obj.name;
+    titleLi.append(titleH3);
     productUl.appendChild(titleLi);
     const priceLi = document.createElement("li");
     priceLi.innerHTML = `price: ${obj.price}`;
