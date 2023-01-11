@@ -36,15 +36,15 @@ const currencyList = async () => {
   }
 };
 
-window.onload = (event) => {
-  currencyList();
+window.onload = async (event) => {
+  await currencyList();
   //console.log("page is fully loaded");
 };
 
 const swapCurrency = () => {
   const baseCurrencyValue = baseCurrency.value;
-  const targetCurrencyValue = targetCurrency.value;
-  baseCurrency.value = targetCurrencyValue;
+  //const targetCurrencyValue = targetCurrency.value;
+  baseCurrency.value = targetCurrency.value;
   targetCurrency.value = baseCurrencyValue;
 };
 
