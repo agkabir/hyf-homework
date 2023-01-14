@@ -1,2 +1,0 @@
-Free Currency Rates API
-It is a Currency converter API does not require any api key. It support both prettified and mimified json format reponses. It also provides currency rate of 150+ currencies different base currencies. The response is in object formats.
