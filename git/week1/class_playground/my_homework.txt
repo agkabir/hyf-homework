@@ -1,6 +1,0 @@
-This is the first line after modification
-
-I added this line after pushes on github
-
-this is second line
-modified the homework 
