@@ -1,7 +1,7 @@
 let savedScreenshots = [];
 let loggedIn = false;
 let createdUsersList = [];
-//
+
 const urlEl = document.getElementById("url");
 const btnCreateScreenshotEl = document.getElementById("btnCreateScreenshot");
 const displaySavedScreenshot = document.getElementById("screenshot-container");
