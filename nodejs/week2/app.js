@@ -11,15 +11,20 @@ app.get("/", (req, res) => {
   res.send("Test message");
 });
 
+// filter the document by query parameter
+const filteredDoc = (document, queryParam) => {
+  return document.filter((obj) =>
+    Object.keys(obj).some((key) =>
+      obj[key].toString().toLowerCase().includes(queryParam.toLowerCase())
+    )
+  );
+};
+
 app.get("/search", (req, res) => {
   const { q } = req.query;
   let result = doc;
   if (q) {
-    result = doc.filter((obj) =>
-      Object.keys(obj).some((key) =>
-        obj[key].toString().toLowerCase().includes(q.toLowerCase())
-      )
-    );
+    result = filteredDoc(doc, q);
   }
 
   res.send(result);
@@ -44,11 +49,7 @@ app.post("/search", (req, res) => {
     return res.status(400).send();
   } else if (q) {
     // check for query parameter
-    result = doc.filter((obj) =>
-      Object.keys(obj).some((key) =>
-        obj[key].toString().toLowerCase().includes(q.toLowerCase())
-      )
-    );
+    result = filteredDoc(doc, q);
   } else if (fields) {
     // check for fields parameters
     result = doc.filter((obj) =>
