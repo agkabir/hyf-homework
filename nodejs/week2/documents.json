@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1,
+    "name": "Used Apple Airpods",
+    "price": "50",
+    "description": "Battery life is not great"
+  },
+  {
+    "id": 2,
+    "type": "doc",
+    "value": "hello world"
+  },
+  {
+    "id": 3,
+    "type": "document",
+    "price": "50",
+    "value": "hello its a different world"
+  },
+  {
+    "id": 4,
+    "type": "doc",
+    "price": "100",
+    "value": "hello world"
+  }
+]
