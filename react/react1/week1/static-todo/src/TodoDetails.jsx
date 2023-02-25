@@ -1,8 +1,8 @@
-export default function TodoDetails({ description, deadline }) {
+export default function TodoDetails({ todo }) {
     return (
         <ul>
-            <li>Description : { description }</li>
-            <li>Deadline : { deadline }</li>
+            <li>Description : { todo.description }</li>
+            <li>Deadline : { todo.deadline }</li>
         </ul>
     )
 }

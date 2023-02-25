@@ -7,8 +7,7 @@ export default function Todo({ todos }) {
     items.push(<TodoTitle title={todo.title} key={todo.title} />);
     items.push(
       <TodoDetails
-        description={todo.description}
-        deadline={todo.deadline}
+        todo={todo}
         key={todo.deadline}
       />
     );
