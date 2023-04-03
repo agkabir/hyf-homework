@@ -1,4 +1,5 @@
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useState, useEffect, useMemo } from "react";
+import DebounceText from "./DebounceText";
 const api_url = "https://api.github.com/search/users?q=";
 const UserContext = createContext();
 
@@ -8,33 +9,32 @@ function UserContextProvider({ children }) {
   const [fetchError, setFetchError] = useState(null);
   const [userList, setUserList] = useState([]);
 
+  const debouncedSearch = DebounceText(searchText, 500);
+
   const handleSearchTextChanged = React.useCallback((e) => {
     setSearchText(e.target.value);
   }, []);
   useEffect(() => {
-    if (searchText) {
-      const fetchUsers = async () => {
-        try {
-          setIsLoading(true);
-          const response = await fetch(api_url + searchText);
-          if (!response.ok) throw Error("Did not receive expected data!");
-          const result = await response.json();
-          setUserList(result.items);
-          setFetchError(null);
-        } catch (err) {
-          setFetchError(err.message);
-        } finally {
-          setIsLoading(false);
-        }
-      };
-      //(async () => await fetchUsers())();
-      fetchUsers();
-    } else {
-      setUserList([]);
-    }
-  }, [searchText]);
+    const fetchUsers = async () => {
+      try {
+        setIsLoading(true);
+        const response = await fetch(api_url + debouncedSearch);
+        if (!response.ok) throw Error("Did not receive expected data!");
+        const result = await response.json();
+        setUserList(result.items);
+        setFetchError(null);
+      } catch (err) {
+        setFetchError(err.message);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    //(async () => await fetchUsers())();
+    if (debouncedSearch) fetchUsers();
+    else setUserList([]);
+  }, [debouncedSearch]);
 
-  const contextValue = React.useMemo(() => {
+  const contextValue = useMemo(() => {
     return {
       isLoading,
       fetchError,
