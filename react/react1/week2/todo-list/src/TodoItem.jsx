@@ -2,16 +2,16 @@ import React, { useState, useEffect } from "react";
 function TodoItem({ todo, onDelete }) {
   const [isChecked, setIsChecked] = useState(false);
 
-  const changeOnChecked = (event) => {
-    setIsChecked(event.target.checked);
+  const changeOnChecked = () => {
+    setIsChecked(!isChecked);
   };
 
   useEffect(() => {
-    const spanElement = document.getElementById(`span${todo.id}`);
+    const todoElement = document.getElementById(`span${todo.id}`);
     if (isChecked) {
-      spanElement.style.textDecoration = "line-through";
+      todoElement.style.textDecoration = "line-through";
     } else {
-      spanElement.style.textDecoration = "none";
+      todoElement.style.textDecoration = "none";
     }
   }, [isChecked, todo.id]);
 
