@@ -3,3 +3,5 @@ Brocolli
 Butter nut squ
 Pumkin
 Califlower
+Spinach
+Carrot
